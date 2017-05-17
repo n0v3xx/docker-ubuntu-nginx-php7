@@ -1,23 +1,40 @@
 # docker-ubuntu-nginx-php7
 Docker config to create PHP 7.1, NGINX container
 
-**Ubuntu 16.04  with NGINX (1.10.0) and PHP (7.1)**
+**Ubuntu 16.04  with NGINX (1.10.0), PHP (7.1.5), OPcache and Xdebug (2.5.1)**
 
 Ready to use docker container.
 
-Webserver Packages:
+System Packages:
+* git
+* unzip
+* vim
+* nano
+* libbz2-dev
+* libicu-dev
+* libmcrypt-dev
+* libzip-dev
+* libxml2-dev
+* mysql-client
+* supervisor
 * nginx
 
 PHP Packages:
-* mysql-client
-* supervisor
 * php7.1
 * php7.1-fpm
 * php7.1-common
 * php7.1-curl
+* php7.1-mbstring
+* php7.1-xml
 * php7.1-mysql
 * php7.1-dev
+* php7.1-bz2
+* php7.1-intl
 * php7.1-xdebug
+* php7.1-ldap
+* php7.1-memcached
+* php7.1-soap
+* php7.1-memcache
 
 Modify docker/ubuntu/php71/Dockerfile if you want more packages.
 
@@ -25,23 +42,4 @@ Modify docker/ubuntu/php71/Dockerfile if you want more packages.
 
 **Run**
 
-    chmod +x ./docker/bin/setup.sh
-    ./docker/bin/setup.sh
-    
-Visit http://localhost:8180/info.php or https://localhost:8181/info.php
-    
-**Connect to Container**
-
-    # Root
-    sudo docker exec -it base_web /bin/bash
-    
-    # User
-    sudo docker exec -itu myName base_web /bin/bash
-    
-**Restart or Stop**
-
-    # Restart
-    sudo docker-compose -f ./docker/ubuntu/php71/docker-compose.yml restart
-    
-    # Stop
-    sudo docker-compose -f ./docker/ubuntu/php71/docker-compose.yml stop
+    sudo docker run -t -i blackjack777/ubuntu-nginx-php71:1.0 /bin/bash
