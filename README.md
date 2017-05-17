@@ -3,7 +3,12 @@ Docker config to create PHP 7.1, NGINX container
 
 **Ubuntu 16.04  with NGINX (1.10.0), PHP (7.1.5), OPcache and Xdebug (2.5.1)**
 
-Ready to use docker container.
+
+Ready to use docker container -> https://hub.docker.com/r/blackjack777/ubuntu-apache-php/
+
+[![](https://images.microbadger.com/badges/image/blackjack777/ubuntu-nginx-php71:1.0.svg)](https://microbadger.com/images/blackjack777/ubuntu-nginx-php71:1.0 "Get your own image badge on microbadger.com")
+
+[![](https://images.microbadger.com/badges/version/blackjack777/ubuntu-nginx-php71:1.0.svg)](https://microbadger.com/images/blackjack777/ubuntu-nginx-php71:1.0 "Get your own version badge on microbadger.com")
 
 System Packages:
 * git
@@ -37,8 +42,6 @@ PHP Packages:
 * php7.1-memcache
 
 Modify docker/ubuntu/php71/Dockerfile if you want more packages.
-
-!!! Modify the last line in "docker/bin/setup.sh" if you want to run a deployment.
 
 **Run**
 
